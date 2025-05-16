@@ -1,0 +1,25 @@
+erDiagram
+    USER {
+        int Id
+        string Email
+        string Password
+    }
+
+    OPPORTUNITY {
+        int Id
+        string Name
+        int UrlId
+        string Status
+        date ApplicationDate
+        string Description
+        date FeedbackDate
+        int UserId
+    }
+
+    URL {
+        int Id
+        string Url
+    }
+
+    USER ||--o{ OPPORTUNITY : has
+    OPPORTUNITY }|--|| URL : belongs_to

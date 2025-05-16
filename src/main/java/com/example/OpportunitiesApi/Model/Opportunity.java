@@ -21,5 +21,7 @@ public class Opportunity {
     long applicationDate;
     @Column(name = "FeedbackDate")
     long feedbackDate;
-
+    @Column(name = "UserId")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private int userId;
 }
